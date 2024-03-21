@@ -3,9 +3,9 @@ Description = prometheus server Service
 
 [Service]
 User=bin
-WorkingDirectory=/opt/prometheus-{{ version }}.linux-amd64
-ExecStart=/bin/node /app/index.js
-SyslogIdentifier=backend
+ExecStart=
+SyslogIdentifier=/opt/prometheus-{{ version }}.linux-amd64
+prometheus
 
 [Install]
 WantedBy=multi-user.target
