@@ -2,8 +2,8 @@
 Description = prometheus server Service
 
 [Service]
-User=expense
-Environment=DB_HOST="mysql-{{ env }}.rajdevops.store"
+User=bin
+WorkingDirectory=/opt/prometheus-{{ version }}.linux-amd64
 ExecStart=/bin/node /app/index.js
 SyslogIdentifier=backend
 
