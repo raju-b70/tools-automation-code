@@ -8,3 +8,5 @@ data "aws_security_group" "selected" {
   name = "allow-all"
 }
 
+# this is ami details
+#and we gave permission for security group in aws
