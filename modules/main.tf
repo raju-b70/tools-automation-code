@@ -3,10 +3,7 @@ resource "aws_instance" "instance" {
   instance_type          = var.instance_type
   vpc_security_group_ids = [data.aws_security_group.selected.id]
   iam_instance_profile = aws_iam_instance_profile.instance_profile.name
-  spot_options{
-    instance_interruption_behaviour = "stop"
-    spot_instance_type = "persistent"
-  }
+
 
   tags = {
     Name = var.tool_name
